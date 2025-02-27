@@ -709,8 +709,8 @@ function cleanup_containerd() {
 		return
 	fi
 
-	rm -f $containerd_conf_file
 	if [ -f "$containerd_conf_file_backup" ]; then
+ 		rm -f $containerd_conf_file
 		mv "$containerd_conf_file_backup" "$containerd_conf_file"
 	fi
 }
